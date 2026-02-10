@@ -10,6 +10,7 @@
 .vscode/
 .idea/
 
-# Brain artifacts (optional but usually not in repo)
-/.gemini/
-命中"
+# AI Chatbot Injector specific
+ai-chatbot-injector/docs/
+.agent/
+.agents/
