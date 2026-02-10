@@ -1,0 +1,15 @@
+# Extensions Private Keys
+*.pem
+
+# Packages
+*.crx
+*.zip
+
+# System / IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Brain artifacts (optional but usually not in repo)
+/.gemini/
+命中"

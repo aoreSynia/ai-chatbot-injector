@@ -1,0 +1,57 @@
+{
+    "manifest_version": 3,
+    "name": "AI Chatbot Injector",
+    "version": "2.2",
+    "update_url": "https://aoreSynia.github.io/ai-chatbot-injector/updates.xml",
+    "description": "Injects a custom AI chatbot into any webpage.",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage",
+        "scripting",
+        "contextMenus"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "assets/icon16.png",
+            "48": "assets/icon48.png"
+        }
+    },
+    "background": {
+        "service_worker": "background/service-worker.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "lib/marked.min.js",
+                "lib/dompurify.min.js",
+                "content/content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/styles.css",
+                "assets/chat-template.html",
+                "content/ui-controller.js",
+                "content/shadow-root.js",
+                "content/scanner.js",
+                "content/readability.js",
+                "content/navigation-observer.js",
+                "content/llm-client.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
