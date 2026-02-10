@@ -1,9 +1,9 @@
 # Extensions Private Keys
 *.pem
 
-# Packages
-*.crx
-*.zip
+# Packages (Allowed for distribution)
+# *.crx
+# *.zip
 
 # System / IDE
 .DS_Store
